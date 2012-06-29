@@ -4,7 +4,7 @@
 USE_DEVEL=${USE_DEVEL:-"n"}
 
 pkgname=libdrm
-pkgver=2.4.35
+pkgver=2.4.36
 pkgrel=1
 pkgdesc="X.Org Userspace interface to kernel DRM services"
 url="http://xorg.freedesktop.org/"
@@ -19,7 +19,7 @@ if Fuse $USE_DEVEL; then
 else
 	up2date="Flasttar http://dri.freedesktop.org/libdrm/"
 	source=("http://dri.freedesktop.org/libdrm/$pkgname-$pkgver.tar.bz2")
-	sha1sums=('a1d8d4945f782371d7855dbd693db885bd7e3d83')
+	sha1sums=('bbf0efd37e806ea7fa83fab19e032eac1cdc775f')
 fi
 
 build()
