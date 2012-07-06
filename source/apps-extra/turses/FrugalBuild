@@ -2,7 +2,7 @@
 # Maintainer: Slown <slown@frugalware.org>
 
 pkgname=turses
-pkgver=0.2.0
+pkgver=0.2.4
 pkgrel=1
 pkgdesc="A Twitter client featuring a sexy curses interface"
 depends=('python-oauth2' 'tweepy' 'urwid' 'ncurses' 'python-httplib2')
@@ -10,4 +10,4 @@ makedepends=('python-distribute')
 groups=('apps-extra')
 archs=('i686' 'x86_64')
 Finclude pypi
-sha1sums=('8f700bdad0e6900ddd6aac9ea00b2b75bc97aec0')
+sha1sums=('cacc64c43b1e07ddba5e5b314c15a9fa0a14a528')
