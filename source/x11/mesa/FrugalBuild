@@ -20,7 +20,7 @@ USE_WAYLAND_EGL=${USE_WAYLAND_EGL:-"n"}
 pkgname=mesa
 origname=Mesa
 _F_archive_name="MesaLib"
-pkgver=8.0.3
+pkgver=8.0.4
 pkgrel=1
 pkgdesc="Mesa is a 3D graphics library"
 url="http://mesa3d.sourceforge.net/"
@@ -36,23 +36,23 @@ groups=('x11' 'xorg-core' 'xorg-libs')
 
 if Fuse DEVEL; then
 	unset source sha1sums
-	pkgver=9999.g83a0242
+	pkgver=9999.gfcebb15
 	pkgrel=0
 	_F_scm_type="git"
         _F_scm_url="git://anongit.freedesktop.org/mesa/mesa"
 	Finclude scm
 else
-	source=("ftp://ftp.freedesktop.org/pub/mesa/$pkgver/MesaLib-$pkgver.tar.bz2")
-	sha1sums=('768bdb2fe133bbcccd3323b79484d0d17bc0d05d')
+	source=("ftp://ftp.freedesktop.org/pub/mesa/$pkgver/MesaLib-$pkgver.tar.bz2" \
+		mesa-8.0.3-llvm-3.1-fixes.patch)
+	sha1sums=('c64f8c03caf9ededd5f7011e246c42a649096c8c' \
+		'4ab1665ceda9efdc54c5270605bb2163c45e60be')
 fi
 
 source=("${source[@]}" \
-	mesa-8.0.3-llvm-3.1-fixes.patch \
 	libGL.la \
 	libGLU.la)
 
 sha1sums=("${sha1sums[@]}" \
-	'4ab1665ceda9efdc54c5270605bb2163c45e60be' \
 	'650973d708466f5c4c21e70c1f1f6c118b27e614' \
 	'12c57ac5e7e8a94d4d41b0f37b0fb3f470791c39')
 
