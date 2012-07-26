@@ -2,8 +2,6 @@
 # Maintainer: Devil505 <devil505linux@gmail.com>
 # Contributor: Miklos Vajna <vmiklos@frugalware.org>
 
-USE_DEVEL="${USE_DEVEL:-"n"}"
-
 pkgname=vlc
 pkgver=2.0.3
 pkgextraver=
@@ -24,16 +22,8 @@ groups=('xmultimedia')
 archs=('i686' 'x86_64')
 
 up2date="Flasttar http://download.videolan.org/pub/videolan/vlc/last/"
-if ! Fuse DEVEL; then
-	source=("http://download.videolan.org/pub/videolan/vlc/$pkgver$pkgextraver/$pkgname-$pkgver$pkgextraver.tar.xz")
-	sha1sums=('9f161d997eae613bc6431bcb2459e1aefad8d529')
-else
-	pkgver=2.0.0
-	pkgextraver=-rc1
-	pkgrel=0
-	source=("http://download.videolan.org/pub/videolan/testing/$pkgname-$pkgver$pkgextraver/$pkgname-$pkgver$pkgextraver.tar.xz")
-	sha1sum=('c4a7416b949a6f5c6839fd8805bae170b2d1bd12')
-fi
+source=("http://download.videolan.org/pub/videolan/vlc/$pkgver$pkgextraver/$pkgname-$pkgver$pkgextraver.tar.xz")
+sha1sums=('9f161d997eae613bc6431bcb2459e1aefad8d529')
 
 subpkgs=("${subpkgs[@]}" 'vlc-libdvdnav')
 subdescs=("${subdescs[@]}" 'vlc plugin for libdvdnav')
