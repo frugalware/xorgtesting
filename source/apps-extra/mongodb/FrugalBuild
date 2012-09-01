@@ -1,0 +1,24 @@
+# Compiling Time: 0.01 SBU
+# Maintainer: CSÉCSY László <boobaa@frugalware.org>
+
+pkgname=mongodb
+pkgver=2.2.0
+pkgrel=1
+pkgdesc="A scalable, high-performance, open source NoSQL database"
+url="http://www.mongodb.org"
+up2date="lynx -dump $url/downloads | grep src- -m1 | sed 's/.*-src-r\(.*\)\.tar.*/\1/'"
+groups=('apps-extra')
+archs=('i686' 'x86_64')
+depends=('libboost' 'boost')
+makedepends=('scons')
+source=(http://downloads.mongodb.org/src/mongodb-src-r$pkgver.tar.gz)
+sha1sums=('bdf414c3a71386f1bf7b6df8da72400abe434ebe')
+
+build()
+{
+	Fcd $pkgname-src-r$pkgver
+	scons all || Fdie
+	scons --prefix $Fdestdir/usr install || Fdie
+}
+
+# optimization OK

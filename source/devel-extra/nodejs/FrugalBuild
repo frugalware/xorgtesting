@@ -1,0 +1,19 @@
+# Compiling Time: 0.23 SBU
+# Maintainer: DeX77 <dex@dragonslave.de>
+
+pkgname=nodejs
+pkgver=0.8.8
+pkgrel=1
+pkgdesc='Evented I/O for V8 javascript'
+archs=('i686' 'x86_64')
+url='http://nodejs.org/'
+license=('MIT')
+groups=('devel-extra')
+depends=('python' 'openssl')
+source=("http://nodejs.org/dist/v${pkgver}/node-v${pkgver}.tar.gz")
+sha1sums=('5ddafc059d2f774e35e6375f5b61157879a46f0f')
+_F_archive_name="node"
+Fpkgversep="-v"
+up2date="Flasttar http://nodejs.org"
+Fconfopts="--prefix=/usr"
+# optimization OK

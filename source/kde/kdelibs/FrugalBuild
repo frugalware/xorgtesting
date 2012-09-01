@@ -15,12 +15,10 @@ makedepends=("${makedepends[@]}" "krb5" "libqttest>=$_F_kde_qtver" \
 	"shared-desktop-ontologies>=0.5" "soprano-backend-redland>=2.7.0")
 source=("${source[@]}" \
 	frugalware-menu.patch \
-	kde-applications-menu.patch \
-	fix-application-crashes.patch)
+	kde-applications-menu.patch)
 sha1sums=("${sha1sums[@]}" \
           'c657c474875c155197dde1c846f1791e744febc2' \
-          '86ee8c8660f19de8141ac99cd6943964d97a1ed7' \
-          '2735449f8ef450577ad0e9bd99c98bcc11717478')
+	  '86ee8c8660f19de8141ac99cd6943964d97a1ed7')
 
 provides=('kat' 'libkdecore-data')
 conflicts=("${provides[@]}")
@@ -284,7 +282,7 @@ subpkgs=("${subpkgs[@]}" "kdelibs-core")
 subdescs=("${subdescs[@]}" "KDE4 Core Library.")
 subdepends=("${subdepends[@]}" "pcre>=8.30 \
 	libgcc strigi>=0.7.2-2 xfsprogs-acl libxrender libice \
-	libxfixes libuuid libkrb5 shared-mime-info udev udisks upower")
+	libxfixes libuuid libkrb5 shared-mime-info systemd>=188 udisks upower")
 subrodepends=("${subrodepends[@]}" "$KDEUIDEP $KIODEP $KJSDEP $KPARTSDEP $SOLIDDEP kdelibs-data")
 subgroups=("${subgroups[@]}" 'kde kde-core')
 subarchs=("${subarchs[@]}" 'i686 x86_64')
